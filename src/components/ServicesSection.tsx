@@ -55,7 +55,7 @@ const ServicesSection = () => {
             <Cpu className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">Our Services</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
             Solutions That <span className="gradient-text">Transform</span> Business
           </h2>
           <p className="text-muted-foreground">
@@ -85,7 +85,7 @@ const ServicesSection = () => {
               </p>
 
               {/* AI Badge */}
-              <div className="mt-6 inline-flex items-center gap-1 text-xs text-primary/80">
+              <div className="mt-6 inline-flex items-center gap-1 text-xs text-accent">
                 <Sparkles className="w-3 h-3" />
                 AI-Enhanced
               </div>

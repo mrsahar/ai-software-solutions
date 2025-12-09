@@ -6,47 +6,52 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 120 10% 98%;
+    --foreground: 150 40% 15%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 40% 15%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 40% 15%;
 
-    --primary: 199 89% 48%;
-    --primary-foreground: 222 47% 6%;
+    --primary: 143 40% 28%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 47% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 120 20% 94%;
+    --secondary-foreground: 143 40% 28%;
 
-    --muted: 222 47% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 120 15% 92%;
+    --muted-foreground: 150 15% 40%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 88 50% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 47% 16%;
-    --input: 222 47% 16%;
-    --ring: 199 89% 48%;
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 143 40% 28%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(262 83% 58%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 6%) 0%, hsl(222 47% 10%) 50%, hsl(222 47% 6%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(222 47% 10% / 0.5) 0%, hsl(222 47% 8% / 0.8) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(199 89% 48% / 0.15) 0%, transparent 50%);
+    /* Custom tokens - Everlogic Green Theme */
+    --green-dark: 143 40% 28%;
+    --green-medium: 110 35% 40%;
+    --green-light: 88 50% 45%;
+    --teal: 174 42% 51%;
     
-    --shadow-glow: 0 0 60px hsl(199 89% 48% / 0.3);
-    --shadow-card: 0 8px 32px hsl(222 47% 4% / 0.5);
+    --gradient-primary: linear-gradient(135deg, hsl(143 40% 28%) 0%, hsl(88 50% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(120 10% 98%) 0%, hsl(120 15% 95%) 50%, hsl(120 10% 98%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(120 15% 98%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(88 50% 45% / 0.12) 0%, transparent 50%);
     
-    --glass-bg: hsl(222 47% 10% / 0.6);
-    --glass-border: hsl(222 47% 20% / 0.3);
+    --shadow-glow: 0 0 60px hsl(88 50% 45% / 0.2);
+    --shadow-card: 0 8px 32px hsl(150 20% 10% / 0.08);
+    
+    --glass-bg: hsl(0 0% 100% / 0.8);
+    --glass-border: hsl(120 15% 85% / 0.5);
   }
 }
 
@@ -74,6 +79,7 @@
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-card);
   }
 
   .glow-effect {
@@ -93,12 +99,13 @@
   }
 
   .glow-effect:hover::before {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
   .animated-border {
     position: relative;
-    background: var(--glass-bg);
+    background: hsl(var(--card));
+    box-shadow: var(--shadow-card);
   }
 
   .animated-border::before {
@@ -107,7 +114,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, hsl(199 89% 48% / 0.5), hsl(262 83% 58% / 0.5));
+    background: linear-gradient(135deg, hsl(143 40% 28% / 0.4), hsl(88 50% 45% / 0.4));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -137,8 +144,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
 }
 
 @keyframes slide-up {

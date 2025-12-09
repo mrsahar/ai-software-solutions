@@ -8,6 +8,8 @@ const technologies = [
   { name: "Firebase", category: "Backend" },
   { name: "MySQL", category: "Database" },
   { name: "PostgreSQL", category: "Database" },
+  { name: "TypeScript", category: "Language" },
+  { name: "JavaScript", category: "Language" },
   { name: "AI/ML", category: "Intelligence" },
 ];
 
@@ -15,7 +17,7 @@ const TechStackSection = () => {
   return (
     <section id="tech" className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/50 to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -24,7 +26,7 @@ const TechStackSection = () => {
             <Code2 className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">Technology Stack</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
             Powered by <span className="gradient-text">Modern Tech</span>
           </h2>
           <p className="text-muted-foreground">
@@ -33,7 +35,7 @@ const TechStackSection = () => {
         </div>
 
         {/* Tech Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
           {technologies.map((tech, index) => (
             <div
               key={tech.name}

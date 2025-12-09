@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+import everlogicLogo from "@/assets/everlogic-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,19 +23,16 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border/50 py-16">
+    <footer className="border-t border-border/50 py-16 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">N</span>
-              </div>
-              <span className="font-bold text-xl text-foreground">NexaTech</span>
+              <img src={everlogicLogo} alt="Everlogic" className="h-10 w-auto" />
             </a>
             <p className="text-muted-foreground text-sm max-w-xs mb-6">
-              Building intelligent software solutions that transform businesses and drive innovation.
+              Organizing the future with intelligent software solutions that transform businesses and drive innovation.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
@@ -46,7 +44,7 @@ const Footer = () => {
                 <a
                   key={idx}
                   href={social.href}
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
+                  className="w-10 h-10 rounded-lg bg-card flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary transition-colors border border-border"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -77,10 +75,10 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} NexaTech. All rights reserved.
+            © {currentYear} Everlogic. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Crafted with passion for innovation
+            Organizing the Future with AI
           </p>
         </div>
       </div>

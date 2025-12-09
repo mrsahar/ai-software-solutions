@@ -7,28 +7,28 @@ const projects = [
     category: "Human Resources",
     description: "Complete HR management solution with payroll automation, leave management, and employee self-service portal.",
     tech: [".NET Core", "Angular", "PostgreSQL"],
-    gradient: "from-primary/20 to-blue-500/20"
+    gradient: "from-primary/20 to-accent/20"
   },
   {
     title: "Digital Banking Platform",
     category: "FinTech",
     description: "Secure mobile and web banking application with real-time transactions, loan processing, and fraud detection.",
     tech: ["React", "Firebase", "AI/ML"],
-    gradient: "from-accent/20 to-purple-500/20"
+    gradient: "from-accent/20 to-primary/20"
   },
   {
     title: "Smart Retail POS",
     category: "Retail",
     description: "Modern point-of-sale system with inventory management, sales analytics, and multi-location support.",
     tech: ["Flutter", "Firebase", "MySQL"],
-    gradient: "from-green-500/20 to-primary/20"
+    gradient: "from-primary/15 to-accent/25"
   },
   {
     title: "Fleet Tracking System",
     category: "Logistics",
     description: "Real-time GPS tracking platform with route optimization, driver management, and delivery notifications.",
     tech: [".NET Core", "React", "PostgreSQL"],
-    gradient: "from-orange-500/20 to-accent/20"
+    gradient: "from-accent/25 to-primary/15"
   },
 ];
 
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
             <Layers className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">Featured Projects</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
             Our <span className="gradient-text">Success Stories</span>
           </h2>
           <p className="text-muted-foreground">
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
               {/* Project Image Placeholder */}
               <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl opacity-20 font-bold text-foreground">
+                  <div className="text-6xl opacity-30 font-bold text-primary">
                     {project.title.charAt(0)}
                   </div>
                 </div>
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
 
               {/* Content */}
               <div className="p-6">
-                <div className="text-xs text-primary font-mono mb-2">{project.category}</div>
+                <div className="text-xs text-accent font-mono mb-2">{project.category}</div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>

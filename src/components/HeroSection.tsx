@@ -8,12 +8,12 @@ const HeroSection = () => {
       <div className="hero-glow top-1/4 left-1/4 animate-pulse-glow" />
       <div className="hero-glow bottom-1/4 right-1/4 animate-pulse-glow delay-200" />
       
-      {/* Grid Pattern */}
+      {/* Subtle Pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `radial-gradient(hsl(var(--primary)) 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
         }}
       />
 
@@ -21,13 +21,13 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-slide-up opacity-0">
-            <Sparkles className="w-4 h-4 text-primary" />
+            <Sparkles className="w-4 h-4 text-accent" />
             <span className="text-sm text-muted-foreground">AI-Powered Software Solutions</span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-slide-up opacity-0 delay-100">
-            Building the Future with{" "}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-slide-up opacity-0 delay-100 text-foreground">
+            Organizing the Future with{" "}
             <span className="gradient-text">Intelligent Software</span>
           </h1>
 
@@ -66,7 +66,7 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
+        <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2">
           <div className="w-1 h-2 bg-primary rounded-full" />
         </div>
       </div>
