@@ -1,5 +1,5 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
-import everlogicLogo from "@/assets/everlogic-logo.png";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,8 +28,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <img src={everlogicLogo} alt="Everlogic" className="h-10 w-auto" />
+            <a href="#" className="inline-block mb-4">
+              <Logo size="md" />
             </a>
             <p className="text-muted-foreground text-sm max-w-xs mb-6">
               Organizing the future with intelligent software solutions that transform businesses and drive innovation.
