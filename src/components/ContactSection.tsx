@@ -17,7 +17,7 @@ const ContactSection = () => {
                 <span className="text-sm text-muted-foreground">Let's Talk</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
                 Ready to <span className="gradient-text">Build Something Great?</span>
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto mb-8">
@@ -40,8 +40,8 @@ const ContactSection = () => {
               <div className="mt-12 pt-8 border-t border-border/50">
                 <p className="text-sm text-muted-foreground">
                   Or reach us directly at{" "}
-                  <a href="mailto:hello@nexatech.dev" className="text-primary hover:underline">
-                    hello@nexatech.dev
+                  <a href="mailto:hello@everlogic.dev" className="text-primary hover:underline">
+                    hello@everlogic.dev
                   </a>
                 </p>
               </div>
