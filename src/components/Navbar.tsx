@@ -1,16 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Technologies", href: "#tech" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/#services" },
+    { name: "Technologies", href: "/#tech" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -18,7 +20,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center">
             <Logo size="md" />
           </a>
 
@@ -37,7 +39,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default">
+            <Button variant="hero" size="default" onClick={() => navigate("/contact")}>
               Get Started
             </Button>
           </div>

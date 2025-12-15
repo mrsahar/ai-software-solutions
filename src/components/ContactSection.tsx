@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, MessageSquare } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ContactSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="contact" className="py-24 relative">
       <div className="container mx-auto px-4 relative z-10">
@@ -26,11 +29,11 @@ const ContactSection = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl">
+                <Button variant="hero" size="xl" onClick={() => navigate("/contact")}>
                   Schedule a Call
                   <ArrowRight className="w-5 h-5" />
                 </Button>
-                <Button variant="hero-outline" size="xl">
+                <Button variant="hero-outline" size="xl" onClick={() => window.location.href = 'mailto:hello@everlogic.dev'}>
                   <Mail className="w-5 h-5" />
                   Send an Email
                 </Button>

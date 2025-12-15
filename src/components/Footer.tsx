@@ -6,19 +6,20 @@ const Footer = () => {
 
   const links = {
     company: [
-      { name: "About Us", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Blog", href: "#" },
+      { name: "About Us", href: "/about" },
+      { name: "Careers", href: "/careers" },
+      { name: "Blog", href: "/blog" },
     ],
     services: [
-      { name: "Web Development", href: "#" },
-      { name: "Mobile Apps", href: "#" },
-      { name: "AI Integration", href: "#" },
+      { name: "Web Development", href: "/services/web-development" },
+      { name: "Mobile Apps", href: "/services/mobile-development" },
+      { name: "AI Integration", href: "/services/ai-integration" },
     ],
     support: [
-      { name: "Contact", href: "#contact" },
-      { name: "Documentation", href: "#" },
-      { name: "Privacy Policy", href: "#" },
+      { name: "Contact", href: "/contact" },
+      { name: "Privacy Policy", href: "/privacy-policy" },
+      { name: "Terms & Conditions", href: "/terms-conditions" },
+      { name: "Cookie Policy", href: "/cookie-policy" },
     ],
   };
 
@@ -28,7 +29,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#" className="inline-block mb-4">
+            <a href="/" className="inline-block mb-4">
               <Logo size="md" />
             </a>
             <p className="text-muted-foreground text-sm max-w-xs mb-6">

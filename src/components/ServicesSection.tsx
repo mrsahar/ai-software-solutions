@@ -1,46 +1,9 @@
 import { 
-  Building2, 
-  CreditCard, 
-  ShoppingCart, 
-  Users, 
-  MapPin, 
-  LayoutDashboard,
   Cpu,
   Sparkles
 } from "lucide-react";
-
-const services = [
-  {
-    icon: Users,
-    title: "HRMS Solutions",
-    description: "Complete human resource management systems with payroll, attendance, and performance tracking."
-  },
-  {
-    icon: Building2,
-    title: "Banking Software",
-    description: "Secure and scalable banking applications with transaction management and compliance features."
-  },
-  {
-    icon: CreditCard,
-    title: "POS Systems",
-    description: "Modern point-of-sale solutions for retail businesses with inventory and sales analytics."
-  },
-  {
-    icon: ShoppingCart,
-    title: "E-Commerce Platforms",
-    description: "Full-featured shopping carts with payment integration, order management, and customer portals."
-  },
-  {
-    icon: MapPin,
-    title: "Tracking Systems",
-    description: "Real-time GPS tracking and fleet management solutions for logistics and delivery."
-  },
-  {
-    icon: LayoutDashboard,
-    title: "Management Systems",
-    description: "Custom ERP and CRM solutions tailored to your business workflows and processes."
-  },
-];
+import { servicesData } from "@/data/services";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   return (
@@ -65,10 +28,11 @@ const ServicesSection = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="group glass-card rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 glow-effect"
+          {Object.entries(servicesData).map(([slug, service], index) => (
+            <Link
+              to={`/services/${slug}`}
+              key={slug}
+              className="group glass-card rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 glow-effect block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Icon */}
@@ -89,7 +53,7 @@ const ServicesSection = () => {
                 <Sparkles className="w-3 h-3" />
                 AI-Enhanced
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,38 +1,11 @@
 import { ExternalLink, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const projects = [
-  {
-    title: "Enterprise HRMS",
-    category: "Human Resources",
-    description: "Complete HR management solution with payroll automation, leave management, and employee self-service portal.",
-    tech: [".NET Core", "Angular", "PostgreSQL"],
-    gradient: "from-primary/20 to-accent/20"
-  },
-  {
-    title: "Digital Banking Platform",
-    category: "FinTech",
-    description: "Secure mobile and web banking application with real-time transactions, loan processing, and fraud detection.",
-    tech: ["React", "Firebase", "AI/ML"],
-    gradient: "from-accent/20 to-primary/20"
-  },
-  {
-    title: "Smart Retail POS",
-    category: "Retail",
-    description: "Modern point-of-sale system with inventory management, sales analytics, and multi-location support.",
-    tech: ["Flutter", "Firebase", "MySQL"],
-    gradient: "from-primary/15 to-accent/25"
-  },
-  {
-    title: "Fleet Tracking System",
-    category: "Logistics",
-    description: "Real-time GPS tracking platform with route optimization, driver management, and delivery notifications.",
-    tech: [".NET Core", "React", "PostgreSQL"],
-    gradient: "from-accent/25 to-primary/15"
-  },
-];
+import { projects } from "@/data/projects";
+import { useNavigate } from "react-router-dom";
 
 const ProjectsSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="projects" className="py-24 relative">
       <div className="hero-glow top-1/3 right-0 opacity-40" />
@@ -54,34 +27,34 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
-              key={project.title}
-              className="group glass-card rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300"
+              key={project.slug}
+              className="group glass-card rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col"
             >
               {/* Project Image Placeholder */}
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl opacity-30 font-bold text-primary">
-                    {project.title.charAt(0)}
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+              <div className={`h-48 relative overflow-hidden`}>
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <div className="text-xs text-accent font-mono mb-2">{project.category}</div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
                   {project.description}
                 </p>
 
                 {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((t) => (
+                  {project.tech.slice(0, 3).map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground"
@@ -89,10 +62,20 @@ const ProjectsSection = () => {
                       {t}
                     </span>
                   ))}
+                  {project.tech.length > 3 && (
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground">
+                      +{project.tech.length - 3}
+                    </span>
+                  )}
                 </div>
 
                 {/* Link */}
-                <Button variant="ghost" size="sm" className="p-0 h-auto text-primary">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="p-0 h-auto text-primary self-start"
+                  onClick={() => navigate(`/work/${project.slug}`)}
+                >
                   View Case Study
                   <ExternalLink className="w-4 h-4 ml-1" />
                 </Button>
