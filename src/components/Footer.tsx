@@ -7,16 +7,18 @@ const Footer = () => {
   const links = {
     company: [
       { name: "About Us", href: "/about" },
+      { name: "Our Work", href: "/work" },
       { name: "Careers", href: "/careers" },
-      { name: "Blog", href: "/blog" },
+      { name: "Blog", href: "/blog" }, 
     ],
     services: [
+      { name: "AI Integration", href: "/services/ai-integration" },
       { name: "Web Development", href: "/services/web-development" },
       { name: "Mobile Apps", href: "/services/mobile-development" },
-      { name: "AI Integration", href: "/services/ai-integration" },
+      { name: "SaaS Development", href: "/services/saas-development" },   
     ],
     support: [
-      { name: "Contact", href: "/contact" },
+      { name: "Contact Us", href: "/contact" },
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms & Conditions", href: "/terms-conditions" },
       { name: "Cookie Policy", href: "/cookie-policy" },

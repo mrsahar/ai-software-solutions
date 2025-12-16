@@ -12,6 +12,7 @@ import ViewWork from "./pages/ViewWork";
 import ProjectDetail from "./pages/ProjectDetail";
 import Blog from "./pages/Blog";
 import Careers from "./pages/Careers";
+import JobApply from "./pages/JobApply";
 import BlogPost from "./pages/BlogPost";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/work/:slug" element={<ProjectDetail />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/apply/:id" element={<JobApply />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />

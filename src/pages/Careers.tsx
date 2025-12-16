@@ -82,7 +82,7 @@ const Careers = () => {
                       </span>
                     </div>
                   </div>
-                  <Button onClick={() => navigate("/contact")} className="shrink-0">
+                  <Button onClick={() => navigate(`/careers/apply/${job.id}`)} className="shrink-0">
                     Apply Now <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </div>
