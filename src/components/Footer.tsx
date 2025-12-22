@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "@/components/Logo";
 
 const Footer = () => {
@@ -31,9 +32,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="/" className="inline-block mb-4">
+            <Link to="/" className="inline-block mb-4">
               <Logo size="md" />
-            </a>
+            </Link>
             <p className="text-muted-foreground text-sm max-w-xs mb-6">
               Organizing the future with intelligent software solutions that transform businesses and drive innovation.
             </p>
@@ -62,12 +63,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {items.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
