@@ -1,73 +1,242 @@
-# Welcome to your Lovable project
+# Everlogic - AI Software Solutions
 
-## Project info
+> Organizing the Future with AI
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Official website for **Everlogic**, a cutting-edge software development company specializing in AI-powered enterprise solutions. Built with modern web technologies to deliver a fast, responsive, and engaging user experience.
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+- **Modern SPA Architecture** - Single Page Application with client-side routing
+- **Responsive Design** - Mobile-first approach with seamless desktop experience
+- **AI-Focused Services** - Showcase of AI integration, web development, mobile apps, and SaaS solutions
+- **Dynamic Portfolio** - Project showcase with detailed case studies
+- **Career Portal** - Job listings with application management
+- **Blog System** - Technical articles and company updates
+- **Contact Forms** - Multiple contact points with form validation
+- **SEO Optimized** - Meta tags, Open Graph, and semantic HTML
+- **IIS Deployment Ready** - Configured for Windows Server/IIS hosting
 
-**Use Lovable**
+## 🚀 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Core Framework
+- **React 18+** - Modern UI library with hooks
+- **TypeScript** - Type-safe development
+- **Vite** - Next-generation frontend tooling
+- **React Router** - Client-side routing
 
-Changes made via Lovable will be committed automatically to this repo.
+### UI & Styling
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality React components built on Radix UI
+- **Lucide Icons** - Beautiful & consistent iconography
+- **CVA** - Class variance authority for component variants
 
-**Use your preferred IDE**
+### State & Data Management
+- **TanStack Query** - Server state management
+- **React Hook Form** - Form state & validation
+- **Zod** - Schema validation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Utilities
+- **clsx** - Conditional className utility
+- **date-fns** - Modern date utility library
+- **Embla Carousel** - Lightweight carousel library
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📋 Prerequisites
 
-Follow these steps:
+- **Node.js** 18+ (recommended 20+)
+- **npm** or **bun** package manager
+- For production: IIS with URL Rewrite module installed
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd ai-software-solutions
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or using bun
+   bun install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 💻 Development
+
+### Run development server
+```bash
 npm run dev
 ```
+Starts the development server at `http://localhost:8080`
 
-**Edit a file directly in GitHub**
+### Build for production
+```bash
+npm run build
+```
+Creates optimized production build in `/dist` folder
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Preview production build
+```bash
+npm run preview
+```
+Locally preview the production build
 
-**Use GitHub Codespaces**
+### Lint code
+```bash
+npm run lint
+```
+Run ESLint to check code quality
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📁 Project Structure
 
-## What technologies are used for this project?
+```
+ai-software-solutions/
+├── public/                      # Static assets
+│   ├── assets/
+│   │   └── images/             # Static images
+│   ├── robots.txt              # SEO crawler instructions
+│   └── web.config              # IIS rewrite rules
+├── src/
+│   ├── components/             # React components
+│   │   ├── ui/                # shadcn/ui components
+│   │   ├── Navbar.tsx         # Navigation component
+│   │   ├── Footer.tsx         # Footer component
+│   │   ├── HeroSection.tsx    # Hero section
+│   │   └── ...                # Other sections
+│   ├── pages/                 # Route pages
+│   │   ├── Index.tsx          # Homepage
+│   │   ├── AboutUs.tsx        # About page
+│   │   ├── Contact.tsx        # Contact page
+│   │   ├── ServiceDetail.tsx  # Service details
+│   │   ├── ProjectDetail.tsx  # Project case study
+│   │   ├── Blog.tsx           # Blog listing
+│   │   ├── BlogPost.tsx       # Individual blog post
+│   │   ├── Careers.tsx        # Job listings
+│   │   ├── JobApply.tsx       # Job application
+│   │   └── ...                # Other pages
+│   ├── data/                  # Static data
+│   │   ├── services.ts        # Services data
+│   │   ├── projects.ts        # Portfolio projects
+│   │   ├── jobs.ts           # Job listings
+│   │   └── blogPosts.ts      # Blog posts
+│   ├── hooks/                # Custom React hooks
+│   ├── lib/                  # Utilities
+│   │   └── utils.ts          # Helper functions
+│   ├── assets/               # Bundled assets
+│   │   └── images/           # Images imported in components
+│   ├── App.tsx               # Root component & routing
+│   ├── main.tsx              # Application entry point
+│   └── index.css             # Global styles
+├── index.html                # HTML template
+├── vite.config.ts           # Vite configuration
+├── tailwind.config.ts       # Tailwind configuration
+├── tsconfig.json            # TypeScript configuration
+└── package.json             # Dependencies & scripts
 
-This project is built with:
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎨 Adding UI Components
 
-## How can I deploy this project?
+This project uses shadcn/ui components. To add new components:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```bash
+npx shadcn@latest add [component-name]
+```
 
-## Can I connect a custom domain to my Lovable project?
+Example:
+```bash
+npx shadcn@latest add button
+npx shadcn@latest add form
+```
 
-Yes, you can!
+Components are added to `src/components/ui/`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🌐 Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### IIS Deployment (Windows Server)
+
+1. **Build the project**
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy the `dist` folder** to your IIS web root
+
+3. **Ensure URL Rewrite module is installed** on IIS
+
+4. **The `web.config` file** is automatically included in the build and handles:
+   - SPA routing (redirects all routes to index.html)
+   - MIME types for modern assets
+   - Compression
+   - Security headers
+   - Cache control
+   - Custom 404 handling
+
+### Environment Configuration
+
+The site is configured to work on:
+- **Development**: `http://localhost:8080`
+- **Production**: Configure in `index.html` canonical URL
+
+### Routing Fix
+
+The project uses React Router for client-side navigation. The `web.config` file ensures that:
+- Direct URL access works (e.g., `/about`, `/contact`)
+- Page refreshes don't result in 404 errors
+- All routes are handled by the React application
+
+## 🔧 Configuration Files
+
+- **vite.config.ts** - Vite build configuration, dev server settings, path aliases
+- **tailwind.config.ts** - Tailwind CSS theme, colors, plugins
+- **tsconfig.json** - TypeScript compiler options
+- **components.json** - shadcn/ui configuration
+- **public/web.config** - IIS rewrite rules and server configuration
+
+## 📝 Content Management
+
+### Adding Services
+Edit `src/data/services.ts` to add/modify services
+
+### Adding Projects
+Edit `src/data/projects.ts` to add portfolio projects
+
+### Adding Blog Posts
+Edit `src/data/blogPosts.ts` to add new articles
+
+### Adding Jobs
+Edit `src/data/jobs.ts` to add job openings
+
+## 🎯 Available Routes
+
+- `/` - Homepage
+- `/about` - About Us
+- `/services/:slug` - Service details
+- `/work` - Portfolio/Projects
+- `/work/:slug` - Project details
+- `/blog` - Blog listing
+- `/blog/:slug` - Blog post
+- `/careers` - Job listings
+- `/careers/apply/:id` - Job application
+- `/contact` - Contact page
+- `/start-project` - Start project form
+- `/privacy-policy` - Privacy Policy
+- `/terms-conditions` - Terms & Conditions
+- `/cookie-policy` - Cookie Policy
+
+## 🤝 Contributing
+
+This is a proprietary project maintained by the Everlogic team.
+
+## 👨‍💻 Author
+
+Created and maintained by **Sahar** for **Everlogic Labs**
+
+## 📄 License
+
+All rights reserved © 2025 Everlogic
+
+---
+
+**Website:** [everlogiclabs.com](http://everlogiclabs.com)  
+**Version:** v1 (2026)
